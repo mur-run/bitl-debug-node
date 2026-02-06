@@ -1,0 +1,49 @@
+{
+  "name": "@bitl/debug",
+  "version": "0.1.0",
+  "description": "Debug utilities for BitL - dump(), dd(), and Express middleware",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "node --test dist/**/*.test.js"
+  },
+  "keywords": [
+    "bitl",
+    "debug",
+    "dump",
+    "dd",
+    "ray",
+    "laravel",
+    "express"
+  ],
+  "author": "BitL Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mur-run/bitl-debug-node.git"
+  },
+  "homepage": "https://github.com/mur-run/bitl-debug-node#readme",
+  "bugs": {
+    "url": "https://github.com/mur-run/bitl-debug-node/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "express": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    }
+  }
+}
