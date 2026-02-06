@@ -1,24 +1,24 @@
-# @bitl/debug
+# @mur-run/debug
 
 > Debug utilities for Node.js applications with BitL Debug Bar integration.
 
-[![npm version](https://img.shields.io/npm/v/@bitl/debug.svg)](https://www.npmjs.com/package/@bitl/debug)
+[![npm version](https://img.shields.io/npm/v/@mur-run/debug.svg)](https://www.npmjs.com/package/@mur-run/debug)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Installation
 
 ```bash
-npm install @bitl/debug
+npm install @mur-run/debug
 # or
-yarn add @bitl/debug
+yarn add @mur-run/debug
 # or
-pnpm add @bitl/debug
+pnpm add @mur-run/debug
 ```
 
 ## Quick Start
 
 ```typescript
-import { dump, dd } from '@bitl/debug';
+import { dump, dd } from '@mur-run/debug';
 
 // Dump a value (continues execution)
 dump({ user: 'John', age: 30 });
@@ -35,7 +35,7 @@ dd(someValue);
 Send a value to BitL Debug Bar. Execution continues.
 
 ```typescript
-import { dump } from '@bitl/debug';
+import { dump } from '@mur-run/debug';
 
 const user = { name: 'John', email: 'john@example.com' };
 dump(user, 'Current User');
@@ -49,7 +49,7 @@ dump(items);
 Dump and die - sends a value and exits the process.
 
 ```typescript
-import { dd } from '@bitl/debug';
+import { dd } from '@mur-run/debug';
 
 // Debug and stop here
 dd(suspiciousValue, 'Check this!');
@@ -62,7 +62,7 @@ dd(suspiciousValue, 'Check this!');
 Log errors with full stack traces.
 
 ```typescript
-import { logError } from '@bitl/debug';
+import { logError } from '@mur-run/debug';
 
 try {
   await riskyOperation();
@@ -77,7 +77,7 @@ try {
 Log database queries with timing.
 
 ```typescript
-import { logQuery } from '@bitl/debug';
+import { logQuery } from '@mur-run/debug';
 
 // Manual logging
 logQuery('SELECT * FROM users WHERE id = ?', [1], 12.5);
@@ -94,7 +94,7 @@ Automatically log all HTTP requests.
 
 ```typescript
 import express from 'express';
-import { expressMiddleware } from '@bitl/debug';
+import { expressMiddleware } from '@mur-run/debug';
 
 const app = express();
 
@@ -109,7 +109,7 @@ app.get('/', (req, res) => {
 ## Configuration
 
 ```typescript
-import { configure } from '@bitl/debug';
+import { configure } from '@mur-run/debug';
 
 configure({
   host: '127.0.0.1',  // BitL debug server host

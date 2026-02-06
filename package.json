@@ -1,5 +1,5 @@
 {
-  "name": "@bitl/debug",
+  "name": "@mur-run/debug",
   "version": "0.1.0",
   "description": "Debug utilities for BitL - dump(), dd(), and Express middleware",
   "main": "dist/index.js",
